@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kicks - Premium Shoe Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Header & Navigation -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-md"
+      data-aos="fade-down"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-3xl font-bold text-red-500">Kicks</h1>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="nav-link text-gray-600 hover:text-red-500"
+            >Home</a
+          >
+          <a href="#featured" class="nav-link text-gray-600 hover:text-red-500"
+            >Featured</a
+          >
+          <a
+            href="#new-arrivals"
+            class="nav-link text-gray-600 hover:text-red-500"
+            >New Arrivals</a
+          >
+          <a href="#gallery" class="nav-link text-gray-600 hover:text-red-500"
+            >Gallery</a
+          >
+        </nav>
+        <a
+          href="#featured"
+          class="hidden md:block bg-red-500 text-white px-6 py-2 rounded-full font-semibold btn-primary animate-pulse"
+        >
+          Shop Now
+        </a>
+        <button id="mobile-menu-button" class="md:hidden text-gray-600 z-50">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-nav"
+      class="mobile-nav fixed top-0 right-0 h-full w-64 bg-white z-40 shadow-lg p-8 pt-24"
+    >
+      <nav class="flex flex-col space-y-6">
+        <a
+          href="#home"
+          class="nav-link text-gray-600 hover:text-red-500 text-lg"
+          >Home</a
+        >
+        <a
+          href="#featured"
+          class="nav-link text-gray-600 hover:text-red-500 text-lg"
+          >Featured</a
+        >
+        <a
+          href="#new-arrivals"
+          class="nav-link text-gray-600 hover:text-red-500 text-lg"
+          >New Arrivals</a
+        >
+        <a
+          href="#gallery"
+          class="nav-link text-gray-600 hover:text-red-500 text-lg"
+          >Gallery</a
+        >
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero-section parallax-bg flex items-center justify-center text-white"
+    >
+      <div class="text-center bg-black/50 p-10 rounded-xl">
+        <h2 class="text-5xl md:text-7xl font-extrabold mb-4" data-aos="fade-up">
+          Step Up Your Game
+        </h2>
+        <p
+          class="text-lg md:text-xl mb-8 max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Find the perfect pair to match your style and performance needs.
+          Unbeatable quality, undeniable style.
+        </p>
+        <a
+          href="#featured"
+          class="bg-red-500 text-white px-10 py-4 rounded-full text-lg font-bold btn-primary animate-pulse"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          Explore Collection
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="featured" class="py-20 bg-transparent">
+      <div class="container mx-auto px-6 section-wrapper bg-gray-100">
+        <h2
+          class="text-4xl font-bold text-center mb-12 pt-12"
+          data-aos="fade-up"
+        >
+          Featured Kicks
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pb-12"
+        >
+          <!-- Product Card 1 -->
+          <div class="card" data-aos="flip-left">
+            <div class="card-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1974&auto=format&fit=crop"
+                alt="Shoe 1"
+                class="w-full h-64 object-cover card-image"
+              />
+            </div>
+            <div class="p-6 card-content">
+              <h3 class="text-2xl font-semibold mb-2">Aura Flex</h3>
+              <p class="text-gray-600 mb-4 pb-12">
+                Lightweight, breathable, and built for comfort. Perfect for your
+                daily run.
+              </p>
+              <span class="text-2xl font-bold text-red-500">$120</span>
+              <a href="#" class="card-button">Add to Cart</a>
+            </div>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="card" data-aos="flip-left" data-aos-delay="200">
+            <div class="card-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1996&auto=format&fit=crop"
+                alt="Shoe 2"
+                class="w-full h-64 object-cover card-image"
+              />
+            </div>
+            <div class="p-6 card-content">
+              <h3 class="text-2xl font-semibold mb-2">Retro High</h3>
+              <p class="text-gray-600 mb-4 pb-12">
+                Classic style meets modern comfort. A timeless addition to your
+                collection.
+              </p>
+              <span class="text-2xl font-bold text-red-500">$150</span>
+              <a href="#" class="card-button">Add to Cart</a>
+            </div>
+          </div>
+          <!-- Product Card 3 -->
+          <div class="card" data-aos="flip-left" data-aos-delay="400">
+            <div class="card-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1964&auto=format&fit=crop"
+                alt="Shoe 3"
+                class="w-full h-64 object-cover card-image"
+              />
+            </div>
+            <div class="p-6 card-content">
+              <h3 class="text-2xl font-semibold mb-2">Vapor Sprint</h3>
+              <p class="text-gray-600 mb-4 pb-12">
+                Engineered for speed and agility. Dominate the track with every
+                stride.
+              </p>
+              <span class="text-2xl font-bold text-red-500">$180</span>
+              <a href="#" class="card-button">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section id="new-arrivals" class="py-20 bg-transparent">
+      <div class="container mx-auto px-6 section-wrapper bg-white">
+        <div class="flex flex-col md:flex-row items-center gap-10 py-12">
+          <div class="md:w-1/2" data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?q=80&w=2070&auto=format&fit=crop"
+              alt="New Arrival Shoe"
+              class="rounded-lg shadow-2xl w-full"
+            />
+          </div>
+          <div class="md:w-1/2" data-aos="fade-left">
+            <h2 class="text-4xl font-bold mb-4">The Future is Here</h2>
+            <p class="text-gray-600 mb-6 text-lg">
+              Introducing the new
+              <span class="font-bold text-red-500">NovaGlide</span>. Experience
+              unparalleled comfort and a futuristic design that turns heads.
+            </p>
+            <ul class="list-disc list-inside mb-8 space-y-2 text-gray-700">
+              <li>Self-lacing technology</li>
+              <li>Responsive foam cushioning</li>
+              <li>Adaptive fit mesh upper</li>
+              <li>Eco-friendly materials</li>
+            </ul>
+            <button
+              class="bg-red-500 text-white px-8 py-3 rounded-full font-bold btn-primary"
+            >
+              Discover NovaGlide
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-transparent">
+      <div class="container mx-auto px-6 section-wrapper bg-gray-100">
+        <h2
+          class="text-4xl font-bold text-center mb-12 pt-12"
+          data-aos="fade-up"
+        >
+          Style Gallery
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pb-12">
+          <div class="grid gap-4">
+            <div data-aos="zoom-in">
+              <img
+                class="gallery-img h-auto max-w-full rounded-lg"
+                src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1964&auto=format&fit=crop"
+                alt=""
+              />
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="100">
+              <img
+                class="gallery-img h-auto max-w-full rounded-lg"
+                src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=2080&auto=format&fit=crop"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div data-aos="zoom-in" data-aos-delay="200">
+              <img
+                class="gallery-img h-auto max-w-full rounded-lg"
+                src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?q=80&w=1915&auto=format&fit=crop"
+                alt=""
+              />
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300">
+              <img
+                class="gallery-img h-auto max-w-full rounded-lg"
+                src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2012&auto=format&fit=crop"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div data-aos="zoom-in" data-aos-delay="400">
+              <img
+                class="gallery-img h-auto max-w-full rounded-lg"
+                src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?q=80&w=1925&auto=format&fit=crop"
+                alt=""
+              />
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="500">
+              <img
+                class="gallery-img h-auto max-w-full rounded-lg"
+                src="https://images.unsplash.com/photo-1587563871167-1df9c34b379d?q=80&w=2070&auto=format&fit=crop"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div data-aos="zoom-in" data-aos-delay="600">
+              <img
+                class="gallery-img h-auto max-w-full rounded-lg"
+                src="https://images.unsplash.com/photo-1562183241-b937e95585b6?q=80&w=1964&auto=format&fit=crop"
+                alt=""
+              />
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="700">
+              <img
+                class="gallery-img h-auto max-w-full rounded-lg"
+                src="https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=1935&auto=format&fit=crop"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <!-- About & Newsletter -->
+          <div class="md:col-span-2" data-aos="fade-up">
+            <h2 class="text-2xl font-bold mb-4">Kicks</h2>
+            <p class="text-gray-400 mb-6 max-w-md">
+              The best place to find your perfect pair. Style, comfort, and
+              performance, all in one place.
+            </p>
+            <h3 class="text-lg font-semibold mb-3">Join Our Newsletter</h3>
+            <form class="flex flex-col sm:flex-row max-w-md">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="w-full px-4 py-3 rounded-t-lg sm:rounded-l-lg sm:rounded-t-none text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500"
+              />
+              <button
+                id="subscribeBtn"
+                type="submit"
+                class="bg-red-500 text-white px-6 py-3 rounded-b-lg sm:rounded-r-lg sm:rounded-b-none font-semibold btn-primary"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+          <!-- Footer Links -->
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-lg font-semibold mb-4">Shop</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >New Arrivals</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Men</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Women</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Sale</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-lg font-semibold mb-4">Support</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Shipping</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Returns</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center"
+        >
+          <p class="text-gray-500 text-sm mb-4 sm:mb-0">
+            &copy; 2025 Kicks. All Rights Reserved.
+          </p>
+          <div class="flex space-x-5">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.316 1.363.364 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.048 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.316-2.427.364-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.048-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.316-1.363-.364-2.427C2.013 14.784 2 14.43 2 12s.013-2.784.06-3.808c.048-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.316 2.427-.364C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.06-1.064.049-1.644.211-2.127.41a3.099 3.099 0 00-1.088.717 3.099 3.099 0 00-.717 1.088c-.199.483-.361 1.063-.41 2.127-.048 1.024-.06 1.351-.06 3.807 0 2.456.011 2.784.06 3.808.049 1.064.211 1.644.41 2.127.199.483.42.86.717 1.088.297.297.675.518 1.088.717.483.199 1.063.361 2.127.41 1.024.048 1.351.06 3.807.06h.468c2.456 0 2.784-.011 3.808-.06 1.064-.049 1.644-.211 2.127-.41.414-.199.78-.42 1.088-.717.297-.297.518-.675.717-1.088.199-.483.361-1.063.41-2.127.048-1.024.06-1.351.06-3.808s-.012-2.784-.06-3.807c-.049-1.064-.211-1.644-.41-2.127a3.099 3.099 0 00-.717-1.088 3.099 3.099 0 00-1.088-.717c-.483-.199-1.063-.361-2.127-.41-1.024-.049-1.351-.06-3.808-.06z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  d="M12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm-3.308 5.135a3.308 3.308 0 116.616 0 3.308 3.308 0 01-6.616 0z"
+                />
+                <path
+                  d="M16.949 6.865a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
